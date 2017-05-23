@@ -8,15 +8,27 @@ class PasswordStore {
 
   constructor() {
     this.correctPassword = process.env.REACT_APP_CORRECT_PASSWORD
+    this.altCorrectPassword = process.env.REACT_APP_ALT_CORRECT_PASSWORD
+    this.testCorrectPassword = process.env.REACT_APP_TEST_CORRECT_PASSWORD
   }
 
   @action _handlePasswordChange(password) {
     this.passwordValue = password
-    console.log('password', password)
 
-    if (password === this.correctPassword) {
-      console.log('correct', password)
-      console.log('correctPassword', this.correctPassword)
+    if (
+      process.env.NODE_ENV === 'production' &&
+      (password === this.correctPassword ||
+        password === this.altCorrectPassword)
+    ) {
+      console.log('correct prod', password)
+    }
+
+    if (
+      (process.env.NODE_ENV === 'development' ||
+        process.env.NODE_ENV === 'test') &&
+      password === this.testCorrectPassword
+    ) {
+      console.log('correct test or dev password', password)
     }
   }
 
