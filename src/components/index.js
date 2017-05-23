@@ -1,4 +1,4 @@
 import MemList from './MemList/MemList'
-import MemListItem from './MemList/MemListItem'
+import MemListItem from './MemListItem/MemListItem'
 
 export { MemList, MemListItem }
