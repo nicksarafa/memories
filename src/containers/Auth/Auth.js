@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import './Auth.css'
 
-@inject('hintStore')
+@inject('smoochStore')
 @inject('authStore')
 @observer
 class Auth extends Component {
@@ -13,7 +13,7 @@ class Auth extends Component {
           <input type="password" placeholder="password" />
           <button type="submit">Login</button>
         </form>
-        <button type="submit" onClick={(e) => this.props.hintStore._alertHint(e)}>Hint</button>
+        <button type="submit" onClick={(e) => this.props.smoochStore._alertSmooch(e)}>Hint</button>
       </div>
     )
   }

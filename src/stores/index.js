@@ -1,5 +1,5 @@
-import { AuthStore } from './AuthStore/AuthStore'
-import { HintStore } from './HintStore/HintStore'
 import { RouterStore } from './RouterStore/RouterStore'
+import { AuthStore } from './AuthStore/AuthStore'
+import { SmoochStore } from './SmoochStore/SmoochStore'
 
-export { AuthStore, HintStore, RouterStore }
+export { RouterStore, AuthStore, SmoochStore }
