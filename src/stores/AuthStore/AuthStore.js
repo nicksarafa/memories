@@ -5,7 +5,8 @@ useStrict(true)
 class AuthStore {
   @observable isAuthenticated = false
 
-  @action _toggleIsAuthenticated() {
+  @action _toggleIsAuthenticated(e) {
+    e.preventDefault()
     this.isAuthenticated = !this.isAuthenticated
   }
 }

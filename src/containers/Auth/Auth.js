@@ -11,9 +11,19 @@ class Auth extends Component {
       <div>
         <form>
           <input type="password" placeholder="password" />
-          <button type="submit">Login</button>
+          <button
+            type="submit"
+            onClick={e => this.props.authStore._toggleIsAuthenticated(e)}
+          >
+            Login
+          </button>
         </form>
-        <button type="submit" onClick={(e) => this.props.smoochStore._alertSmooch(e)}>Hint</button>
+        <button
+          type="submit"
+          onClick={e => this.props.smoochStore._alertSmooch(e)}
+        >
+          Hint
+        </button>
       </div>
     )
   }
