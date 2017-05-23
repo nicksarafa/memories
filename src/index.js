@@ -8,6 +8,7 @@ import { syncHistoryWithStore } from 'mobx-react-router'
 import {
   RouterStore,
   AuthStore,
+  PasswordStore,
   SmoochStore,
 } from './stores'
 import { App } from './containers'
@@ -18,6 +19,7 @@ const routingStore = new RouterStore()
 const stores = {
   routing: routingStore,
   authStore: new AuthStore(),
+  passwordStore: new PasswordStore(),
   smoochStore: new SmoochStore(),
 }
 
